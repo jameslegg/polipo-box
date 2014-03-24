@@ -28,11 +28,9 @@ Note that the example configuration allows access from everywhere. That should b
 
         vagrant up
 
-## Usage
-
 ### Using Vagrant and test-kitchen
 
-Unfortunately vagrant-berkshelf does not currently support Vagrant 1.5 vagrant-berkshelf has been [officially deprecated](https://sethvargo.com/the-future-of-vagrant-berkshelf/). If you are using vagrant 1.5 it is possible to build a Poplio box using test-kitchen.
+Unfortunately vagrant-berkshelf does not currently support Vagrant 1.5 and vagrant-berkshelf has been [officially deprecated](https://sethvargo.com/the-future-of-vagrant-berkshelf/). If you are using vagrant 1.5 it is possible to build a Poplio box using test-kitchen.
 
 * Install Vagrant 1.2 or later: [www.vagrantup.com/downloads](http://www.vagrantup.com/downloads)
 
@@ -43,6 +41,7 @@ Unfortunately vagrant-berkshelf does not currently support Vagrant 1.5 vagrant-b
         # edit .kitchen.yml
 
 * Install required Gems
+
         bundle install
 
 * Spin up the box using test-kitchen see [kitchen.io](http://http://kitchen.ci)
