@@ -10,6 +10,8 @@ Note that the example configuration allows access from everywhere. That should b
 
 ## Usage
 
+### Using Vagrant and vagrant-berkshelf plugin
+
 * Install Vagrant 1.2 or later: [www.vagrantup.com/downloads](http://www.vagrantup.com/downloads)
 * Install Vagrant plugins:
 
@@ -25,6 +27,27 @@ Note that the example configuration allows access from everywhere. That should b
 * Spin up the box
 
         vagrant up
+
+## Usage
+
+### Using Vagrant and test-kitchen
+
+Unfortunately vagrant-berkshelf does not currently support Vagrant 1.5 vagrant-berkshelf has been [officially deprecated](https://sethvargo.com/the-future-of-vagrant-berkshelf/). If you are using vagrant 1.5 it is possible to build a Poplio box using test-kitchen.
+
+* Install Vagrant 1.2 or later: [www.vagrantup.com/downloads](http://www.vagrantup.com/downloads)
+
+* Clone this repository and customize as needed:
+
+        git clone https://github.com/tmatilai/polipo-box.git
+        cd polipo-box
+        # edit .kitchen.yml
+
+* Install required Gems
+        bundle install
+
+* Spin up the box using test-kitchen see [kitchen.io](http://http://kitchen.ci)
+
+        bundle exec kitchen converge
 
 ### Configuring vagrant-proxyconf
 

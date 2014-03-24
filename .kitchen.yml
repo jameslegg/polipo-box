@@ -1,0 +1,23 @@
+---
+driver:
+  name: vagrant
+  network: 
+    - ["private_network", {ip: "192.168.33.200"}]
+  proxy:
+    enabled: false
+  vagrantfile_erb: 'test-kitchen-Vagrantfile.erb'
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: debian-7.4
+
+suites:
+  - name: proxy
+    run_list:
+    - 'apt'
+    - 'polipo_appliance'
+    attributes:
+      polipo_appliance:
+        allowed_clients: "0.0.0.0/0"
